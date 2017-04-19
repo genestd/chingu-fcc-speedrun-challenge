@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Abstraction Layer API</title>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="https://cdn.gomix.com/c7e09b38-2de5-4076-a63d-3f85c162ab43%2Fdg_logo.png">
+    </a>
+    <h1>Image Search Abstraction</h1>
+    <p>This API was created to complete the <a href="http://www.freecodecamp.com" target="_blank">FreeCodeCamp</a> Image Search Abstraction Layer Microservice Challenge.
+      It uses the Pixabay image search API to return image information.  It will return an array of JSON objects with the format: </p>
+    <p><code>{"previewHeight":112
+,"likes":1
+,"favorites":1
+,"tags":"plumbing, fittings, pipe"
+,"webformatHeight":480
+,"views":1214
+,"webformatWidth":640
+,"previewWidth":150
+,"comments":0
+,"downloads":425
+,"pageURL":"https://pixabay.com/en/plumbing-fittings-pipe-connection-1002142/"
+,"previewURL":"https://cdn.pixabay.com/photo/2015/10/22/23/08/plumbing-1002142_150.jpg"
+,"webformatURL":"https://pixabay.com/get/e835b10d29f0033ed95c4518b7494795e470e2dd04b0154897f5c27ba1e8b5_640.jpg"
+,"imageWidth":1920
+,"user_id":1552183
+,"user":"EugenesDIYDen"
+,"type":"photo"
+,"id":1002142
+,"userImageURL":"https://cdn.pixabay.com/user/2015/10/22/22-33-45-404_250x250.jpg"
+,"imageHeight":1440}</code></p>
+    <p class="options"><h3 class="text-left">Options:</h3>
+    <ul class="text-left">
+      <li><b>Endpoint: </b><a href="/api/image" target="_blank">/api/image</a></li>
+      <li><b>Methods: </b>GET</li>
+      <li><b>Query String: </b>search=SEARCH_TERM&offset=10</li>
+      <li><b>search (required): </b>The string to search image tags</li>
+      <li><b>offset: </b>starting page number of records to return - defaults to 1.  
+        The request will return 20 image details per request</li>
+      <li><b>Endpoint: </b><a href="/api/image/recent" target="_blank">/api/image/recent</a></li>
+      <li><b>Methods: </b>GET</li>
+      <li><b>Returns: </b>The 10 most recent search requests submitted through ../api/image</li>
+    </ul>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

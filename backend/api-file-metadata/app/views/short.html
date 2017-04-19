@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>URL Shortener API</title>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="https://cdn.gomix.com/c7e09b38-2de5-4076-a63d-3f85c162ab43%2Fdg_logo.png">
+    </a>
+    <h1>URL Shortener</h1>
+    <p>This API was created to complete the <a href="http://www.freecodecamp.com" target="_blank">FreeCodeCamp</a> URL Shortener Microservice Challenge.
+      Given a URL for a valid domain in the format <code>[protocol]:[domain]/[path]</code>, it will return a JSON object in the format: </p>
+    <p><code>{"original_url":"www.google.com","short_url":1}</code></p>
+    <h3 class="text-left">Options:</h3>
+    <ul class="text-left">
+      <li><b>Endpoint: </b><a href="/api/url" target="_blank">/api/url/[:url]</a></li>
+      <li><b>[:url]: </b>A valid URL in the format [protocol]:[domain]/[path]</li>
+      <li><b>Methods: </b>Supports GET and POST methods</li>
+    </ul>
+    <hr/>
+    <div class="">
+      <form action="/api/url/" method="post" class="frm">
+        <label class="frmFixed">URL to be shortened:&nbsp;</label>  
+        <input type="text" class="frmInput" id="longUrl" name="longUrl"/>  
+        <button type="submit" class="frmFixed">Submit</button>        
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

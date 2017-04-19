@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minimal FRED API proxy</title>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="https://cdn.gomix.com/c7e09b38-2de5-4076-a63d-3f85c162ab43%2Fdg_logo.png">
+    </a>
+    <h1>FRED</h1>
+    <p>This is a simple express server I built to access the FRED API at <a href="http://www.stlouisfed.org" target="_blank">api.stlouisfed.org</a></p>
+    <p>I needed access to the data to build a D3 demo, but the API does not support cross-origin browser requests.  I built this simple server to retrieve datasets in JSON format.</p>
+    <p class="example">To use this proxy, submit the form below -OR- make a GET request to https://accidental-snowman.gomix.me/api/FRED? and then pass the full URL for the FRED query.
+      <br>The server does no validation and only handles file_type=JSON - for example: <br>
+        https://api.stlouisfed.org/fred/series?series_id=GNPCA&api_key=abcdefgh1234&file_type=JSON
+    </p>
+    <div class="">
+      <form action="/api/FRED/" method="post" class="frm">
+        <label class="frmFixed">Complete FRED URL:&nbsp;</label>  
+        <input type="text" class="frmInput" id="fredUrl" name="fredUrl"/>  
+        <button type="submit" class="frmFixed">Submit</button>        
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>

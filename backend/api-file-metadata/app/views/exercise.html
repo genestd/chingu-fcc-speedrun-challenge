@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exercise Tracker API</title>
+<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="https://cdn.gomix.com/c7e09b38-2de5-4076-a63d-3f85c162ab43%2Fdg_logo.png">
+    </a>
+    <h1>Exercise Tracker</h1>
+      <h3 class="text-left">Options:</h3>
+      <ul class="text-left">
+        <li><b>Add User (POST): </b><a href="/api/exercise/add-user" target="_blank">/api/exercise/add-user/</a></li>
+        <li><b>Add Activity (POST): </b><a href="/api/exercise/add-activity" target="_blank">/api/exercise/add-activity/</a></li>
+        <li><b>Get Activity (GET): </b><a href="/api/exercise/" target="_blank">/api/exercise/?userID=[ ]&from=[ ]&to=[ ]&limit=[ ]</a></li>
+      </ul>
+    <div class="frmContainer">
+      <div class="frmUser">
+        <h3>Add User</h3>
+        <form action="/api/exercise/add-user/" method="post" class="frm">
+          <label class="frmLbl" for="userId">User ID: </label>
+          <input class="frmInp" type="text" name="userId" id="userId" placeholder="UserID"/>
+          <button type="submit">Add user</button>
+        </form>
+      </div>
+      <div class="frmActivity">
+        <h3>Add Activity</h3>
+        <form action="/api/exercise/add-activity/" method="post" class="frmVert" name="activity">
+          <span class="text-left frmSpn">
+            <label class="frmLbl" for="uid">User ID: </label>
+            <input class="frmInp" type="text" name="uid" id="uid" placeholder="UserID*" required/>
+          </span>  
+          <span class="text-left frmSpn">
+            <label class="frmLbl" for="act">Activity: </label>
+            <input class="frmInp" type="text" name="act" id="act" placeholder="Activity*" required/>
+          </span>
+          <span class="text-left frmSpn">
+            <label class="frmLbl" for="dur">Duration: </label>
+            <input class="frmInp" type="number" min="0" max="1440" name="dur" id="dur" placeholder="Duration - minutes*" required/>
+          </span>
+          <span class="text-left frmSpn">
+            <label class="frmLbl" for="dt">Date: </label>
+            <input class="frmInp" type="text" name="dt" id="dt" pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="Date - mm/dd/yyyy"/>
+          </span>
+           <button type="submit" class="frmBtnNar">Add Activity</button>
+        </form>
+      </div>  
+    </div>
+  </div>
+</div>
+</body>
+  <script type="text/javascript" src="frmVal.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.11.1/validate.min.js"></script>
+</html>
